@@ -1,4 +1,8 @@
-# Coding Ninja
+# eFantasy Ninja
+
+## Links
+
+* [Page list][http://silentimp.github.io/efantasy.ninja/]
 
 ## Technologies
 

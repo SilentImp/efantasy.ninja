@@ -62,7 +62,7 @@
                     }
                 &:first-child {
                     width: 100%;
-                    word-spacing: normal;
+                    white-space: normal;
                     padding-left: 20px;
                     }
                 }
