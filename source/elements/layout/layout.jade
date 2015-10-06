@@ -9,6 +9,7 @@ html(lang="en")
 
         script(src="js/modernizr.js")
         link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet", href="js/pikaday/css/pikaday.css")
     body
         section.page
             include ../entries/entries.jade
@@ -19,4 +20,7 @@ html(lang="en")
                 block content
 
             include ../footer/footer.jade
+
+        script(src="js/moment/min/moment-with-locales.min.js")
+        script(src="js/pikaday/pikaday.js")
         script(src="js/scripts.js", async, defer)
