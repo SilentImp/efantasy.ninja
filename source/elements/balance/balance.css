@@ -1,0 +1,51 @@
+@import "../../helpers/*";
+
+.balance {
+    max-width: 600px;
+    margin: 0 20px 20px;
+    &__current {
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 0 20px;
+        }
+    &__value {
+        font-weight: bold;
+        color: $purple;
+        }
+    &__note {
+        color: $grey-blue;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 0 20px;
+        }
+    &__radio {
+        display: inline-block;
+        margin: 0 20px 20px 0;
+        position: relative;
+        &-input {
+            position: absolute;
+            bottom: 0;
+            z-index: 0;
+            &:checked + .balance__radio-label {
+                background-color: $purple;
+                color: $white;
+                }
+            }
+        &-label {
+            z-index: 1;
+            position: relative;
+            background-color: $white;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 4px;
+            border: 2px solid $purple;
+            color: $black;
+            font-size: 16px;
+            font-weight: bold;
+            width: 96px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            }
+        }
+    }

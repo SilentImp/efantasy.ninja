@@ -1,15 +1,15 @@
-form.account(action="/update", method="post")
+form.account(action="/update", method="post", role="form")
     fieldset.account__fieldset
         label.account__label(for="account-name") Full Name
-        input.account__input(type="text", name="name" id="account-name", placeholder="Hans Rudolf Giger", value="", required="required")
+        input.account__input(type="text", name="name" id="account-name", placeholder="Hans Rudolf Giger", value="", required="required", role="input")
     fieldset.account__fieldset
         label.account__label(for="account-user") Username
-        input.account__input(type="text", name="name" id="account-user", placeholder="Gigi", value="", required="required")
+        input.account__input(type="text", name="name" id="account-user", placeholder="Gigi", value="", required="required", role="input")
     fieldset.account__fieldset
         label.account__label(for="account-email") Email
-        input.account__input(type="email", name="email" id="account-email", placeholder="gigi@gmail.com", value="", required="required")
+        input.account__input(type="email", name="email" id="account-email", placeholder="gigi@gmail.com", value="", required="required", role="input")
     fieldset.account__fieldset
         label.account__label(for="account-date") Date of Birth
-        input.account__input.account__input_date(type="text", name="date" id="account-date", placeholder="1940-05-02", value="", required="required")
+        input.account__input.account__input_date(type="text", name="date" id="account-date", placeholder="1940-05-02", value="", required="required", role="input")
     menu.account__menu(role="menu")
-        button.button.button_large(type="submit", role="menuitem") Update
+        button.button.button_large(type="submit", role="button") Update

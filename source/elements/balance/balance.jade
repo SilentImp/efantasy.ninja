@@ -1,0 +1,17 @@
+form.balance(action="/add/", method="post", role="form")
+    p.balance__current Current Balance: 
+        strong.balance__value $999.77
+    fieldset.balance__radio
+        input.balance__radio-input(type="radio", name="summ", id="b10", value="10", required="required", role="radio")
+        label.balance__radio-label(for="b10") $10
+    fieldset.balance__radio
+        input.balance__radio-input(type="radio", name="summ", id="b25", value="25", required="required", role="radio")
+        label.balance__radio-label(for="b25") $25
+    fieldset.balance__radio
+        input.balance__radio-input(type="radio", name="summ", id="b50", value="50", required="required", role="radio")
+        label.balance__radio-label(for="b50") $50
+    fieldset.balance__radio
+        input.balance__radio-input(type="radio", name="summ", id="b100", value="100", required="required", role="radio")
+        label.balance__radio-label(for="b100") $100
+    p(role="note").balance__note To pay with Paypal, please select the amount above, and then click the deposit button below. Once your payment is completed, you will be directed back here.
+    button.button.button_large(type="submit", role="button") Add funds
