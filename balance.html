@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Add Funds | Fantasy Ninja</title>
+    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="js/pikaday/css/pikaday.css"/>
+  </head>
+  <body>
+    <section class="page">
+            <nav role="navigation" class="navigation"><a href="/">
+                <h1 class="navigation__logotype">Fantasy Ninja</h1></a>
+              <section class="navigation__section">
+                <h2 class="navigation__title">BROWSE</h2><a href="leagues.html" role="link" class="navigation__link"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Leagues</a><a href="upcoming.html" role="link" class="navigation__link"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Upcoming</a><a href="live.html" role="link" class="navigation__link"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Live</a><a href="results.html" role="link" class="navigation__link"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Results</a>
+              </section>
+              <section class="navigation__section navigation__section_user">
+                <h2 class="navigation__title navigation__title_menu">UserNaMeVeryLong123<a href="/logout" role="link" class="navigation__logout">Logout</a></h2><a href="balance.html" role="link" class="navigation__link navigation__link_current"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Balance | $999.77</a><a href="account.html" role="link" class="navigation__link"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Account</a><a href="transactions.html" role="link" class="navigation__link"><img src="images/dummy-icon.svg" alt="icon" class="navigation__icon"/>Transactions</a>
+              </section>
+            </nav>
+      <section role="main" class="content">
+        <header class="content__header">
+          <h1 class="content__title">Add Funds</h1>
+        </header>
+        <form action="/add/" method="post" role="form" class="balance">
+          <p class="balance__current">Current Balance: <strong class="balance__value">$999.77</strong></p>
+          <fieldset class="balance__radio">
+            <input type="radio" name="summ" id="b10" value="10" required="required" role="radio" class="balance__radio-input"/>
+            <label for="b10" class="balance__radio-label">$10</label>
+          </fieldset>
+          <fieldset class="balance__radio">
+            <input type="radio" name="summ" id="b25" value="25" required="required" role="radio" class="balance__radio-input"/>
+            <label for="b25" class="balance__radio-label">$25</label>
+          </fieldset>
+          <fieldset class="balance__radio">
+            <input type="radio" name="summ" id="b50" value="50" required="required" role="radio" class="balance__radio-input"/>
+            <label for="b50" class="balance__radio-label">$50</label>
+          </fieldset>
+          <fieldset class="balance__radio">
+            <input type="radio" name="summ" id="b100" value="100" required="required" role="radio" class="balance__radio-input"/>
+            <label for="b100" class="balance__radio-label">$100</label>
+          </fieldset>
+          <p role="note" class="balance__note">To pay with Paypal, please select the amount above, and then click the deposit button below. Once your payment is completed, you will be directed back here.</p>
+          <button type="submit" role="button" class="button button_large">Add funds</button>
+        </form>
+      </section>
+      <footer class="footer">
+        <nav role="navigation" class="footer__navigation"><a href="about.html" role="link" class="footer__link">About</a><a href="blog.html" role="link" class="footer__link">Blog</a><a href="rules.html" role="link" class="footer__link">Rules</a><a href="legal.html" role="link" class="footer__link">Legal</a><a href="faq.html" role="link" class="footer__link">FAQ</a><a href="help.html" role="link" class="footer__link">Help</a></nav>
+        <p class="footer__copyright">© EFN LLC 2015</p>
+      </footer>
+    </section>
+    <script src="js/moment/min/moment-with-locales.min.js"></script>
+    <script src="js/pikaday/pikaday.js"></script>
+    <script src="js/scripts.js" async="async" defer="defer"></script>
+  </body>
+</html>

@@ -24,28 +24,28 @@
         <header class="content__header">
           <h1 class="content__title">Account</h1>
         </header>
-        <form action="/update" method="post" class="account">
+        <form action="/update" method="post" role="form" class="account">
           <fieldset class="account__fieldset">
             <label for="account-name" class="account__label">Full Name</label>
-            <input type="text" name="name" id="account-name" placeholder="Hans Rudolf Giger" value="" required="required" class="account__input"/>
+            <input type="text" name="name" id="account-name" placeholder="Hans Rudolf Giger" value="" required="required" role="input" class="account__input"/>
           </fieldset>
           <fieldset class="account__fieldset">
             <label for="account-user" class="account__label">Username</label>
-            <input type="text" name="name" id="account-user" placeholder="Gigi" value="" required="required" class="account__input"/>
+            <input type="text" name="name" id="account-user" placeholder="Gigi" value="" required="required" role="input" class="account__input"/>
           </fieldset>
           <fieldset class="account__fieldset">
             <label for="account-email" class="account__label">Email</label>
-            <input type="email" name="email" id="account-email" placeholder="gigi@gmail.com" value="" required="required" class="account__input"/>
+            <input type="email" name="email" id="account-email" placeholder="gigi@gmail.com" value="" required="required" role="input" class="account__input"/>
           </fieldset>
           <fieldset class="account__fieldset">
             <label for="account-date" class="account__label">Date of Birth</label>
-            <input type="text" name="date" id="account-date" placeholder="1940-05-02" value="" required="required" class="account__input account__input_date"/>
+            <input type="text" name="date" id="account-date" placeholder="1940-05-02" value="" required="required" role="input" class="account__input account__input_date"/>
           </fieldset>
           <menu role="menu" class="account__menu">
-            <button type="submit" role="menuitem" class="button button_large">Update</button>
+            <button type="submit" role="button" class="button button_large">Update</button>
           </menu>
         </form>
-        <section class="hints">
+        <section role="note" class="hints">
           <h2 class="hints__title">Some hints about profile</h2>
           <p class="hints__text">Just edit the password field and hit save</p>
           <h3 class="hints__subtitle">What is a Government ID?</h3>
