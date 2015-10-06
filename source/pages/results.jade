@@ -1,0 +1,39 @@
+extends ../elements/layout/layout.jade
+
+block title
+    title Results | Fantasy Ninja
+
+block navigation
+    +navigation('results')
+
+block content
+    header.content__header
+        h1.content__title Results
+
+    table.content__table
+        thead
+            tr
+                th Contest
+                th
+                th Score
+                th Rank
+                th Win
+                th Prizes
+                th Fee
+                th
+        tbody
+            tr
+                td 
+                    a.content__table-link(href="#") 
+                        img.content__table-icon(src="images/Dota2Logo.svg", alt="Иконка")
+                        | $1M+ in Prizes for Dota2 International Finals 
+                td 
+                    +entries('M')
+                td 168.79
+                td 1759
+                td 
+                    strong $1500
+                td $100000
+                td $1999
+                td
+                    button.button(type="button") RESULTS

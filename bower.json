@@ -1,0 +1,15 @@
+{
+  "name": "CodingNinja",
+  "version": "0.0.0",
+  "authors": [
+    "SilentImp <thesilentimp@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "classList.js": "https://github.com/eligrey/classList.js.git",
+    "es5-shim": "https://github.com/es-shims/es5-shim.git",
+    "promise-polyfill": "~2.1.0",
+    "velocity": "~1.2.3"
+  }
+}

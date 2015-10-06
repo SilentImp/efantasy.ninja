@@ -1,0 +1,43 @@
+@import "../../helpers/colors.css";
+
+@define-mixin icon $code: "\ea02" {
+  speak: none;
+  display: inline-block;
+  vertical-align: middle;
+  font: normal normal normal 14px/1 "icons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: $code;
+  }
+
+@define-mixin clear {
+  &:after{
+    content: ".";
+    clear: both;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    }
+  }
+
+@define-mixin clear_button {
+  background: none;
+  border-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 0;
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0
+    }
+  }

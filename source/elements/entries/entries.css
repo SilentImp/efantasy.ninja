@@ -1,0 +1,15 @@
+@import "../../helpers/*";
+
+.entries {
+    display: inline-block;
+    vertical-align: middle;
+    color: $white;
+    background-color: $purple;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    }
