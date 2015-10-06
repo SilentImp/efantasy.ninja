@@ -41,3 +41,37 @@
     border: 0
     }
   }
+
+@define-mixin input {
+    background: color($purple a(20%));
+    border-style: none;
+    padding: 7px 10px;
+    font-size: 14px;
+    line-height: 16px;
+    height: 30px;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: visible;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 4px;
+    transition: background-color .25s;
+    &:focus,
+    &:hover {
+        background: color($purple a(30%));
+        }
+    &::-webkit-input-placeholder {
+       color: color($purple a(50%));
+        }
+    &:-moz-placeholder {
+       color: color($purple a(50%));
+        }
+    &::-moz-placeholder {
+       color: color($purple a(50%));
+        }
+    &:-ms-input-placeholder {
+       color: color($purple a(50%));
+        }
+    }

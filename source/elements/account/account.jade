@@ -1,0 +1,15 @@
+form.account(action="/update", method="post")
+    fieldset.account__fieldset
+        label.account__label(for="account-name") Full Name
+        input.account__input(type="text", name="name" id="account-name", placeholder="Hans Rudolf Giger")
+    fieldset.account__fieldset
+        label.account__label(for="account-user") Username
+        input.account__input(type="text", name="name" id="account-user", placeholder="Gigi")
+    fieldset.account__fieldset
+        label.account__label(for="account-email") Email
+        input.account__input(type="email", name="email" id="account-email", placeholder="gigi@gmail.com")
+    fieldset.account__fieldset
+        label.account__label(for="account-date") Date of Birth
+        input.account__input(type="text", name="date" id="account-date", placeholder="1940-05-02")
+    menu.account__menu(role="menu")
+        button.button.button_large(type="submit", role="menuitem") Update

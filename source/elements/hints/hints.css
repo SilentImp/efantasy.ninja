@@ -1,0 +1,28 @@
+@import "../../helpers/*";
+
+.hints {
+    float: left;
+    overflow: hidden;
+    width: 280px;
+    border-radius: 4px;
+    background: color($table-border-color a(10%));
+    padding: 10px;
+    color: $grey-blue;
+    font-size: 14px;
+    line-height: 16px;
+    &__title {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: bold;
+        margin: 0 0 24px;
+        text-align: center;
+        color: $black;
+        }
+    &__subtitle {
+        font-weight: bold;
+        margin: 16px 0 0;
+        }
+    &__text {
+
+        }
+    }

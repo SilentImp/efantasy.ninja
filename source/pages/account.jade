@@ -1,0 +1,14 @@
+extends ../elements/layout/layout.jade
+
+block title
+    title Account | Fantasy Ninja
+
+block navigation
+    +navigation('account')
+
+block content
+    header.content__header
+        h1.content__title Account
+
+    include ../elements/account/account.jade
+    include ../elements/hints/hints.jade
