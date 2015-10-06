@@ -7,6 +7,7 @@
     <title>Account | Fantasy Ninja</title>
     <script src="js/modernizr.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="js/pikaday/css/pikaday.css"/>
   </head>
   <body>
     <section class="page">
@@ -26,19 +27,19 @@
         <form action="/update" method="post" class="account">
           <fieldset class="account__fieldset">
             <label for="account-name" class="account__label">Full Name</label>
-            <input type="text" name="name" id="account-name" placeholder="Hans Rudolf Giger" class="account__input"/>
+            <input type="text" name="name" id="account-name" placeholder="Hans Rudolf Giger" value="" required="required" class="account__input"/>
           </fieldset>
           <fieldset class="account__fieldset">
             <label for="account-user" class="account__label">Username</label>
-            <input type="text" name="name" id="account-user" placeholder="Gigi" class="account__input"/>
+            <input type="text" name="name" id="account-user" placeholder="Gigi" value="" required="required" class="account__input"/>
           </fieldset>
           <fieldset class="account__fieldset">
             <label for="account-email" class="account__label">Email</label>
-            <input type="email" name="email" id="account-email" placeholder="gigi@gmail.com" class="account__input"/>
+            <input type="email" name="email" id="account-email" placeholder="gigi@gmail.com" value="" required="required" class="account__input"/>
           </fieldset>
           <fieldset class="account__fieldset">
             <label for="account-date" class="account__label">Date of Birth</label>
-            <input type="text" name="date" id="account-date" placeholder="1940-05-02" class="account__input"/>
+            <input type="text" name="date" id="account-date" placeholder="1940-05-02" value="" required="required" class="account__input account__input_date"/>
           </fieldset>
           <menu role="menu" class="account__menu">
             <button type="submit" role="menuitem" class="button button_large">Update</button>
@@ -62,6 +63,8 @@
         <p class="footer__copyright">© EFN LLC 2015</p>
       </footer>
     </section>
+    <script src="js/moment/min/moment-with-locales.min.js"></script>
+    <script src="js/pikaday/pikaday.js"></script>
     <script src="js/scripts.js" async="async" defer="defer"></script>
   </body>
 </html>
