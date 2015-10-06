@@ -71,7 +71,7 @@ gulp.task('fonts', function () {
   gulp.src(dirs.source.fonts).pipe(gulp.dest(dirs.build.fonts));
 });
 
-gulp.task('images', ['svg'], function () {
+gulp.task('images', function () {
   return gulp.src(dirs.source.images)
     .pipe(plumber())
     .pipe(gulpif(/[.](svg)$/, svg2png()))
@@ -83,10 +83,6 @@ gulp.task('images', ['svg'], function () {
       })
     ))
     .pipe(gulp.dest(dirs.build.images));
-});
-
-gulp.task('svg', function () {
-  gulp.src(dirs.source.svg).pipe(gulp.dest(dirs.build.images));
 });
 
 gulp.task('html', function() {

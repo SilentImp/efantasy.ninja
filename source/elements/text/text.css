@@ -55,6 +55,12 @@
         line-height: 18px;
         background: color($grey-blue a(10%));
         }
+    img {
+        margin: 18px 0;
+        display: block;
+        max-width: 600px;
+        max-height: 100vh;
+        }
     table{
         width: 100%;
         border-bottom: 1px solid color($table-border-color a(40%));
