@@ -1,9 +1,10 @@
-footer.footer
-    nav.footer__navigation(role="navigation")
-        a.footer__link(href="about.html", role="link") About
-        a.footer__link(href="blog.html", role="link") Blog
-        a.footer__link(href="rules.html", role="link") Rules
-        a.footer__link(href="legal.html", role="link") Legal
-        a.footer__link(href="faq.html", role="link") FAQ
-        a.footer__link(href="help.html", role="link") Help
-    p.footer__copyright © EFN LLC 2015
+mixin footer(page)
+    footer.footer
+        nav.footer__navigation(role="navigation")
+            a.footer__link(href="about.html", role="link", class= (page=='about') ? 'footer__link_current':'') About
+            a.footer__link(href="blog.html", role="link", class= (page=='blog') ? 'footer__link_current':'') Blog
+            a.footer__link(href="rules.html", role="link", class= (page=='rules') ? 'footer__link_current':'') Rules
+            a.footer__link(href="legal.html", role="link", class= (page=='legal') ? 'footer__link_current':'') Legal
+            a.footer__link(href="faq.html", role="link", class= (page=='faq') ? 'footer__link_current':'') FAQ
+            a.footer__link(href="help.html", role="link", class= (page=='help') ? 'footer__link_current':'') Help
+        p.footer__copyright © EFN LLC 2015

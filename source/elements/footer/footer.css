@@ -16,6 +16,10 @@
         margin: 0 4px;
         display: inline-block;
         color: $grey-dark;
+        &_current {
+            color: $white;
+            pointer-events: none;
+            }
         &:focus,
         &:hover {
             color: $white;

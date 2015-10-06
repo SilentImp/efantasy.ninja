@@ -15,12 +15,12 @@ html(lang="en")
             include ../entries/entries.jade
             include ../navigation/navigation.jade
             block navigation
-
+                +navigation
             section.content(role = 'main')
                 block content
-
             include ../footer/footer.jade
-
+            block footer
+                +footer
         script(src="js/moment/min/moment-with-locales.min.js")
         script(src="js/pikaday/pikaday.js")
         script(src="js/scripts.js", async, defer)
