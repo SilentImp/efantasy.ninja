@@ -2,7 +2,7 @@
 
 ## Links
 
-* [Page list][http://silentimp.github.io/efantasy.ninja/]
+* [Page list](http://silentimp.github.io/efantasy.ninja/)
 
 ## Technologies
 
