@@ -26,3 +26,13 @@
 
         }
     }
+
+@media (max-width: 800px) {
+    html body {
+        .hints {
+            margin: 20px;
+            width: auto;
+            max-width: 600px;
+            }
+        }
+    }

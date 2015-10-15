@@ -1,0 +1,48 @@
+.popup
+    header.popup__header
+        h2.popup__title $1M+ in Prizes for Dota2 Internation Finals
+
+        p.popup__details Entry Fee: 
+            b.popup__value $1050
+        p.popup__details 
+            span.entries M
+            | Multi-entry
+
+        button.popup__close(type="button")
+
+        menu.popup__navigation
+            button.popup__button.popup__button_current(type="button", data-target="info") Info
+            button.popup__button(type="button", data-target="entries") Entries
+            button.popup__button(type="button", data-target="prizes") Prizes
+
+    section.popup__tabs
+        section.popup__tab.popup__tab_current(data-tab = "info")
+            include ../info/info.jade
+
+        section.popup__tab(data-tab = "entries")
+            .popup__columns
+                .popup__column.popup__column_short
+                    include ../entries-list/entries-list-1.jade
+                .popup__column.popup__column_short
+                    include ../entries-list/entries-list-2.jade
+                .popup__column.popup__column_short
+                    include ../entries-list/entries-list-3.jade
+
+            .popup__paginator
+                a.popup__link.popup__link_current(href="/page/1/") 1
+                a.popup__link(href="/page/2/") 2
+                a.popup__link(href="/page/3/") 3
+
+        section.popup__tab(data-tab = "prizes")
+            .popup__column
+                include ../prizes/prizes.jade
+            .popup__column
+                include ../prizes/prizes.jade
+
+    footer.popup__footer
+        button.popup__enter.button(type="button") ENTER
+        p.popup__count You have entered this league 
+            b.popup__value.popup__value_main 10 
+            | times        
+
+.popup__lightbox

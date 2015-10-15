@@ -23,8 +23,14 @@
         margin: 0 0 20px;
         &-link {
             color: $black;
-            &:hover{
+            text-decoration: none;
+            overflow: hidden;
+            position: relative;
+            span:hover{
                 text-decoration: none;
+                }
+            span {
+                text-decoration: underline;
                 }
             }
         &-icon {
@@ -64,6 +70,60 @@
                     width: 100%;
                     white-space: normal;
                     padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+@media (max-width: 1000px) {
+    html body {
+        .content {
+            float: none;
+            padding: 0;
+            margin: auto;
+            left: auto;
+            }
+        }
+    }
+
+@media (max-width: 800px) {
+    html body {
+        .content  .content__table{
+            border-style: none;
+            thead {
+                display: none;
+                }
+            tbody {
+                tr {
+                    display: block;
+                    padding: 20px 20px 0;
+                    margin: 20px 0;
+                    border-top: 1px solid color($table-border-color a(40%));
+                    &:first-child {
+                        padding-top: 0;
+                        border-style: none;
+                        }
+                    }
+                td {
+                    padding: 0 0 0 100px;
+                    margin: 0 0 5px;
+                    min-height: 20px;
+                    line-height: 20px;
+                    border-style: none;
+                    display: block;
+                    position: relative;
+                    white-space: normal;
+                    width: auto;
+                    &[data-th]:before {
+                        content: attr(data-th)": ";
+                        font-weight: bold;
+                        width: 100px;
+                        position: absolute;
+                        white-space: nowrap;
+                        top: 0;
+                        left: 0;
+                        }
                     }
                 }
             }

@@ -1,0 +1,232 @@
+@import "../../helpers/*";
+
+.edit {
+    margin: 30px 0;
+    &__popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 280px;
+        padding: 30px 20px;
+        margin: -60px 0 0 -160px;
+        background-color: $purple;
+        z-index: 2;
+        border-radius: 0 16px 16px 16px;
+        &-text {
+            color: $white;
+            font-size: 28px;
+            line-height: 32px;
+            strong {
+                font-weight: bold;
+                }
+            }
+        &-close {
+            @mixin clear_button;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            background: url('../images/close.svg') 50% 50% no-repeat;
+            background-size: contain;
+            }
+        }
+    &__available {
+        padding: 0 20px 0 0;
+        width: 67%;
+        float: left;
+        margin-left: -100%;
+        position: relative;
+        left: 100%;
+        box-sizing: border-box;
+        &_added {
+            pointer-events: none;
+            td {
+                opacity: .5;
+                }
+            }
+        &-name {
+            font-weight: bold;
+            }
+        &-avatar {
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+            border-radius: 100%;
+            }
+        &-players {
+            width: 100%;
+            margin: 20px 0;
+            thead {
+                th {
+                    font-size: 14px;
+                    color: $purple;
+                    line-height: 49px;
+                    height: 49px;
+                    border-bottom: 1px solid $table-border-color;
+                    &:first-child {
+                        text-align: left;
+                        }
+                    }
+                }
+            tbody {
+                .hidden {
+                    display: none;
+                    }
+                td {
+                    font-size: 12px;
+                    line-height: 49px;
+                    height: 49px;
+                    border-bottom: 1px solid $table-border-color;
+                    }
+                }
+            }
+        }
+    &__players {
+        clear: both;
+        overflow: hidden;
+        position: relative;
+        margin: 20px 0;
+        }
+    &__player {
+        height: 49px;
+        border-bottom: 1px solid $table-border-color;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: color($black a(40%)) url(../images/logotype.svg) 50% 50% no-repeat;
+            background-size: contain;
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            }
+        &:after {
+            content: "Player";
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            line-height: 49px;
+            text-align: center;
+            color: color($black a(40%));
+            }
+        }
+    &__header {
+        margin: 0 20px;
+        }
+    &__start {
+        float: right;
+        font-size: 14px;
+        line-height: 16px;
+        color: $table-border-color;
+        &-time {
+            font-weight: bold;
+            color: $black;
+            }
+        }
+    &__details {
+        margin: 0 0 20px;
+        &-value {
+            color: $black;
+            &_summ {
+                color: $purple;
+                font-weight: bold;
+                }
+            strong {
+                font-weight: bold;
+                }
+            }
+        &-item {
+            display: inline-block;
+            margin: 0 20px 0 0;
+            vertical-align: middle;
+            font-size: 14px;
+            line-height: 16px;
+            color: $table-border-color;
+            }
+        }
+    &__rules {
+        float: right;
+        font-size: 14px;
+        line-height: 16px;
+        color: $purple;
+        &:hover {
+            text-decoration: none;
+            }
+        }
+    &__title {
+        font-size: 30px;
+        line-height: 34px;
+        margin: 0 0 20px;
+        }
+    &__subtitle {
+        font-size: 22px;
+        line-height: 26px;
+        overflow: hidden;
+        }
+    &__salary {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        text-align: right;
+        overflow: hidden;
+        margin: 0 0 0 10px;
+        font-size: 11px;
+        line-height: 12px;
+        color: $table-border-color;
+        text-transform: uppercase;
+        &-value {
+            font-weight: bold;
+            color: $purple;
+            font-size: 16px;
+            line-height: 18px;
+            }
+        }
+    &__teamer {
+        position: relative;
+        margin: 0 20px;
+        @mixin clear;
+        }
+    &__team {
+        width: 33%;
+        float: left;
+        margin-left: -33%;
+        position: relative;
+        left: 100%;
+        button.button.button_submit {
+            width: 100%;
+            }
+        }
+    }
+
+
+@media (max-width: 800px) {
+    html body {
+        .edit {
+            &__available {
+                width: auto;
+                float: none;
+                margin: 20px auto;
+                left: auto;
+                padding: 0;
+                }
+            &__team {
+                width: auto;
+                float: none;
+                margin: 20px auto;
+                left: auto;
+                }
+            }
+        }
+    }

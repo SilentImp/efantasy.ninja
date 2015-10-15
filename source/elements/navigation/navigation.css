@@ -11,13 +11,17 @@
     min-height: 100vh;
     width: 240px;
     background: $black-light;
-    z-index: 1;
+    z-index: 5;
     padding: 82px 0 94px;
     box-sizing: border-box;
 
     font-size: 12px;
     line-height: 14px;
     color: $grey-dark;
+
+    &__toggle {
+        display: none;
+        }
 
     &__logotype {
         width: 52px;
@@ -100,6 +104,79 @@
         &:focus {
             background-color: $black;
             color: $white;
+            }
+        }
+    }
+
+@media (max-width: 1000px) {
+    html body {
+        .navigation {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            float: none;
+            margin: auto;
+            min-height: 80px;
+            width: auto;
+            z-index: 5;
+            padding: 0;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 5;
+                background: $black-light;
+                }
+            &_open {
+                .navigation__toggle {
+                    transform: rotate(180deg);
+                    }
+                }
+            &__logout {
+                position: relative;
+                top: auto;
+                right: auto;
+                display: inline-block;
+                vertical-align: middle;
+                }
+            &__logotype {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                right: auto;
+                margin: auto;
+                background-size: contain;
+                z-index: 6;
+                }
+            &__toggle {
+                @mixin clear_button;
+                cursor: pointer;
+                position: absolute;
+                display: block;
+                top: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                background: url(../images/menu.svg) 50% 50% no-repeat;
+                z-index: 6;
+
+                transition: transform .25s;
+                }
+            &__wrapper {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                right: 0;
+                background: $black-light;
+                z-index: 0;
+                }
             }
         }
     }

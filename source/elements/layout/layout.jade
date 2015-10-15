@@ -21,6 +21,9 @@ html(lang="en")
             include ../footer/footer.jade
             block footer
                 +footer
+        include ../popup/popup.jade
+
+        script(src="js/velocity/velocity.js")
         script(src="js/moment/min/moment-with-locales.min.js")
         script(src="js/pikaday/pikaday.js")
         script(src="js/scripts.js", async, defer)

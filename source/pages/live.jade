@@ -23,17 +23,17 @@ block content
                 th
         tbody
             tr
-                td 
+                td(data-th="Contest")
                     a.content__table-link(href="#") 
                         img.content__table-icon(src="images/Dota2Logo.svg", alt="Иконка")
-                        | $1M+ in Prizes for Dota2 International Finals 
+                        span $1M+ in Prizes for Dota2 International Finals 
                 td 
                     +entries('M')
-                td 168.79
-                td 1759
-                td 
+                td(data-th="Score") 168.79
+                td(data-th="Rank") 1759
+                td(data-th="Win") 
                     strong $1500
-                td $100000
-                td $1999
+                td(data-th="Prizes") $100000
+                td(data-th="Fee") $1999
                 td
-                    button.button(type="button") Details
+                    button.button(type="button", data-action="open popup") Details

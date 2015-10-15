@@ -1,0 +1,29 @@
+@import "../../helpers/*";
+
+.games {
+    overflow: hidden;
+    position: relative;
+    @mixin clear;
+    font-size: 0;
+    margin: 20px 20px 20px;
+    &__game{
+        display: inline-block;
+        vertical-align: top;
+        border: 2px solid $purple;
+        border-radius: 4px;
+        width: 56px;
+        height: 56px;
+        margin: 0 16px 16px 0;
+        text-align: center;
+        font-size: 12px;
+        line-height: 14px;
+        }
+    &__team {
+        font-weight: bold;
+        display: block;
+        }
+    &__time {
+        font-size: 11px;
+        line-height: 12px;
+        }
+    }

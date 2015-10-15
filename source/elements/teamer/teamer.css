@@ -1,0 +1,38 @@
+@import "../../helpers/*";
+
+.teamer {
+    position: relative;
+    height: 34px;
+    padding: 7px 40px 8px 57px;
+    white-space: nowrap;
+    font-size: 0;
+    background-color: $white;
+    z-index: 1;
+    &__remove {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        }
+    &__name {
+        font-size: 16px;
+        line-height: 18px;
+        color: $black;
+        }
+    &__avatar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 100%;
+        width: 42px;
+        height: 42px;
+        margin: auto;
+        }
+    &__salary {
+        font-size: 14px;
+        line-height: 16px;
+        color: $grey-blue;
+        }
+    }

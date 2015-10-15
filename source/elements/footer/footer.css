@@ -30,3 +30,16 @@
         margin: 20px 0 0;
         }
     }
+
+@media (max-width: 1000px) {
+    html body {
+        .footer {
+            background-color: $black-light;
+            width: auto;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+            }
+        }
+    }

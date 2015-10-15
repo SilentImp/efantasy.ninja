@@ -24,17 +24,17 @@ block content
             while i > 0
                 - i--
                 tr
-                    td 
+                    td(data-th="Contest")
                         a.content__table-link(href="#") 
                             img.content__table-icon(src="images/Dota2Logo.svg", alt="Иконка")
-                            | $1M+ in Prizes for Dota2 International Finals 
+                            span $1M+ in Prizes for Dota2 International Finals 
                     td 
                         +entries('M')
-                    td 
+                    td(data-th="Entries")
                         strong 20 
                         | / 789123567
-                    td $100000
-                    td
+                    td(data-th="Prizes") $100000
+                    td(data-th="Starts")
                         time(datetime="2015-09-13T11:00Z") 9/13 11:00AM
                     td
-                        button.button(type="button") FREE
+                        button.button(type="button", data-action="open popup") FREE

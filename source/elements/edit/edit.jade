@@ -1,0 +1,74 @@
+.edit
+    .edit__popup
+        p.edit__popup-text
+            | You need 
+            strong 8 
+            | players to join this contest!
+        button.edit__popup-close(type="button")
+
+    header.edit__header
+        a.edit__rules(href="rules.html", role="link") Rules & Scoring
+        h2.edit__title $1M+ in Prizes for Dota2 International Finals
+        p.edit__start League starts:
+            time.edit__start-time(datetime="2015-09-01T13:00") Sun 13th Sep 1pm
+        p.edit__details
+
+            span.edit__details-item
+                strong.edit__details-title Entries: 
+                span.edit__details-value 12345 / 
+                    strong 200000
+
+            span.edit__details-item
+                strong.edit__details-title Prizes: 
+                span.edit__details-value.edit__details-value_summ $10000000
+
+            span.edit__details-item
+                strong.edit__details-title Entry fee: 
+                span.edit__details-value
+                    strong $10
+    include ../games/games.jade
+    form.edit__teamer(action="/join/", method="post")
+        fieldset.edit__available
+            h3.edit__subtitle Available Players
+            include ../filter/filter.jade
+            table.edit__available-players(data-container="filter-player")
+                thead
+                    tr
+                        th Name
+                        th Team
+                        th Season Pts
+                        th Last Day Pts
+                        th Salary
+                        th 
+                tbody
+                    - var i = 10;
+                    - var tags = ['NAVi', 'LGD', 'EG', 'CDEC'];
+                    while i--
+                        tr(data-id=i, data-tag=tags[i % 4])
+                            td.edit__available-players-name
+                                img.edit__available-avatar(src="images/avatar.jpg", alt="Avatar")
+                                span.edit__available-name Aggresif
+                            td.edit__available-players-team=tags[i % 4]
+                            td.edit__available-players-season 15.9
+                            td.edit__available-players-pts 56.11
+                            td.edit__available-players-salary $1800
+                            td 
+                                button.button.button_add(type="button") +
+
+
+        fieldset.edit__team
+            .edit__salary 
+                .edit__salary-value $10,000
+                | SALARY REMAINING 
+            h3.edit__subtitle Your Team
+            ul.edit__players
+                li.edit__player 
+                li.edit__player 
+                li.edit__player 
+                li.edit__player 
+                li.edit__player 
+                li.edit__player 
+                li.edit__player 
+                li.edit__player 
+
+            button.button.button_submit(type="submit") Join contest

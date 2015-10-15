@@ -1,0 +1,18 @@
+.info
+    header.info__header
+        time.info__time(datetime="2013-09-13") Sun 13th Sep 1pm
+        p.info__event GAME START
+
+    p.info__message Pick a team of 
+        b 8 
+        | players from the following games:
+
+    section.info__teams
+        - var i = 12;
+        - while(i--)
+            a.info__team(href="#") NV @ CL9
+                time.info__team_time(datetime-"2013-09-13") Sun 5pm UTC
+
+    nav.info__links
+        a.info__link(href="#") Scoring Rules
+        a.info__link(href="#") FAQ

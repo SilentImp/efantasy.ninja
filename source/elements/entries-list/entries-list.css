@@ -1,0 +1,12 @@
+@import "../../helpers/*";
+
+.entries-list {
+    margin: 20px 0 20px 20px;
+    list-style: decimal;
+    font-size: 14px;
+    line-height: 16px;
+    &__value {
+        color: $purple;
+        font-weight: bold;
+        }
+    }

@@ -1,0 +1,16 @@
+section.filter(role="form", data-target="filter-player")
+    fieldset.filter__item
+        input.filter__input#filter-all(type="radio", name="filter", checked="checked", data-filter="all", required="required", value="all")
+        label.filter__label(for="filter-all") All
+    fieldset.filter__item
+        input.filter__input#filter-navi(type="radio", name="filter", required="required", value="navi", data-filter="navi")
+        label.filter__label(for="filter-navi") NAVi
+    fieldset.filter__item
+        input.filter__input#filter-lgd(type="radio", name="filter", required="required", value="lgd", data-filter="lgd")
+        label.filter__label(for="filter-lgd") LGD
+    fieldset.filter__item
+        input.filter__input#filter-eg(type="radio", name="filter", required="required", value="eg", data-filter="eg")
+        label.filter__label(for="filter-eg") EG
+    fieldset.filter__item
+        input.filter__input#filter-cdec(type="radio", name="filter", required="required", value="cdec", data-filter="cdec")
+        label.filter__label(for="filter-cdec") CDEC

@@ -15,3 +15,14 @@ html{
             }
         }
     }
+
+@media (max-width: 1000px) {
+    html body {
+        box-shadow: none;
+        .page {
+            padding: 80px 0 84px;
+            box-sizing: border-box;
+            min-height: 100vh;
+            }
+        }
+    }

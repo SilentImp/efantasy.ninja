@@ -1,0 +1,24 @@
+@import "../../helpers/*";
+
+.prizes {
+    margin: 30px;
+    &__prize {
+        /*font-family: monospace;*/
+        @mixin clear;
+        }
+    &__place {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+        text-align: right;
+        padding: 0 5px 0 0;
+        font-weight: bold;
+        }
+    &__summ {
+        box-sizing: border-box;
+        padding: 0 0 0 5px;
+        float: right;
+        width: 50%;
+        text-align: left;
+        }
+    }

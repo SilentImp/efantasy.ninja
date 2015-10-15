@@ -1,0 +1,173 @@
+@import "../../helpers/*";
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    z-index: 101;
+    width: 660px;
+
+    &__navigation {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        }
+
+    &__close {
+        @mixin clear_button;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: url(../images/close.svg) 50% 50% no-repeat;
+        cursor: pointer;
+        }
+
+    &__button {
+        @mixin clear_button;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: bottom;
+        line-height: 36px;
+        height: 36px;
+        font-size: 16px;
+        padding: 0 15px;
+        border-radius: 4px 4px 0 0;
+        color: $white;
+        &_current {
+            font-weight: bold;
+            color: $black;
+            background: $white;
+            }
+        }
+
+    &__header {
+        min-height: 64px;
+        background: $black;
+        border-radius: 4px 4px 0 0;
+        padding: 20px 60px 36px 20px;
+        overflow: hidden;
+        color: $white;
+        position: relative;
+        }
+
+    &__title {
+        font-size: 24px;
+        line-height: 28px;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        margin: 0 0 10px;
+        }
+
+    &__columns {
+        @mixin clear;
+        }
+
+    &__paginator {
+        text-align: center;
+        margin: 0 20px;
+        }
+
+    &__link {
+        text-decoration: none;
+        color: $purple;
+        margin: 0 5px;
+        display: inline-block;
+        line-height: 16px;
+        font-size: 14px;
+        &_current {
+            color: $black;
+            pointer-events: none;
+            font-weight: bold;
+            }
+        }
+
+    &__column {
+        float: left;
+        width: 50%;
+        min-height: 1px;
+        &_short {
+            width: 33%;
+            float: left;
+            padding: 0 0 0 20px;
+            box-sizing: border-box;
+            }
+        }
+
+    &__value {
+        color: $white;
+        font-weight: bold;
+        &_main {
+            font-size: 20px;
+            }
+        }
+
+    &__details {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 16px;
+        color: $table-border-color;
+        margin: 0 20px 0 0;
+        .entries {
+            margin: 0 10px 0 0;
+            }
+        }
+
+    &__tabs {
+        min-height: 330px;
+        background: $white;
+        @mixin clear;
+        }
+
+    &__tab {
+        position: relative;
+        display: none;
+        min-height: 330px;
+        width: 100%;
+        overflow: hidden;
+        &_current{
+            display: block;
+            }
+        }
+
+    &__footer {
+        min-height: 38px;
+        background: $black;
+        border-radius: 0 0 4px 4px;
+        padding: 32px 20px 20px;
+        overflow: hidden;
+        color: $white;
+        line-height: 38px;
+        @mixin clear;
+        }
+
+    &__count {
+        color: $table-border-color;
+        font-size: 14px;
+        line-height: 38px;
+        }
+
+    &__enter {
+        float: right;
+        }
+
+    &__lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        background: color($black a(50%));
+        }
+    }
