@@ -26,3 +26,11 @@ html{
             }
         }
     }
+
+@media (max-width: 700px) {
+    html body.popup-opened {
+        .page {
+            display: none;
+        }
+    }
+}

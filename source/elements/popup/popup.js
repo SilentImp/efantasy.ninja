@@ -70,6 +70,7 @@
          * @description Close popup and lightbox
          */
         closePopup() {
+            document.body.classList.toggle('popup-opened', false);
             Velocity(this.lightbox, "stop");
             Velocity(this.lightbox, "fadeOut", {duration: 250});
             Velocity(this.popup, "stop");
@@ -80,6 +81,7 @@
          * @description Close popup and lightbox
          */
         openPopup() {
+            document.body.classList.toggle('popup-opened', true);
             Velocity(this.lightbox, "stop");
             Velocity(this.lightbox, "fadeIn", {duration: 250});
             Velocity(this.popup, "stop");

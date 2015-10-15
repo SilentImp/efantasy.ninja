@@ -66,3 +66,20 @@
             }
         }
     }
+
+@media (max-width: 800px) {
+    html body {
+        .info {
+            &__teams {
+                width: auto;
+                }
+            &__event {
+                text-align: left;
+                }
+            &__header {
+                float: none;
+                margin: 0 0 10px;
+                }
+            }
+        }
+    }

@@ -45,13 +45,13 @@
                     - var tags = ['NAVi', 'LGD', 'EG', 'CDEC'];
                     while i--
                         tr(data-id=i, data-tag=tags[i % 4])
-                            td.edit__available-players-name
+                            td.edit__available-players-name(data-th="Name")
                                 img.edit__available-avatar(src="images/avatar.jpg", alt="Avatar")
                                 span.edit__available-name Aggresif
-                            td.edit__available-players-team=tags[i % 4]
-                            td.edit__available-players-season 15.9
-                            td.edit__available-players-pts 56.11
-                            td.edit__available-players-salary $1800
+                            td.edit__available-players-team(data-th="Team")=tags[i % 4]
+                            td.edit__available-players-season(data-th="Season Pts") 15.9
+                            td.edit__available-players-pts(data-th="Last Day Pts") 56.11
+                            td.edit__available-players-salary(data-th="Salary") $1800
                             td 
                                 button.button.button_add(type="button") +
 

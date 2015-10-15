@@ -230,3 +230,61 @@
             }
         }
     }
+
+
+@media (max-width: 800px) {
+    html body {
+        .edit{
+            &__rules {
+                float: none;
+                margin: 0 0 10px;
+                display: inline-block;
+                }
+            &__start {
+                float: none;
+                }
+            .edit__available .edit__available-players{
+                border-style: none;
+                thead {
+                    display: none;
+                    }
+                tbody {
+                    tr {
+                        display: block;
+                        padding: 20px 20px 0;
+                        margin: 20px 0;
+                        border-top: 1px solid color($table-border-color a(40%));
+                        &.hidden {
+                            display: none;
+                            }
+                        &:first-child {
+                            padding-top: 0;
+                            border-style: none;
+                            }
+                        }
+                    td {
+                        padding: 0 0 0 100px;
+                        margin: 0 0 5px;
+                        min-height: 20px;
+                        line-height: 20px;
+                        height: auto;
+                        border-style: none;
+                        display: block;
+                        position: relative;
+                        white-space: normal;
+                        width: auto;
+                        &[data-th]:before {
+                            content: attr(data-th)": ";
+                            font-weight: bold;
+                            width: 100px;
+                            position: absolute;
+                            white-space: nowrap;
+                            top: 0;
+                            left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
