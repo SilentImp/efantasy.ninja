@@ -257,7 +257,6 @@
         }
     }
 
-
 @media (max-width: 1240px) {
     html body {
         .landing {
@@ -441,3 +440,37 @@
         }
     }
 }
+
+html.ie body .landing {
+    &__wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 0;
+        max-width: none;
+        padding: 40px 0;
+        }
+    &__section {
+        margin: 0;
+        padding: 0;
+        &_games {
+            padding: 40px 0 60px;
+            }
+        &_bets {
+            padding: 40px 0;
+            }
+        }
+    &__header {
+        margin: 0;
+        .landing__wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 0;
+            max-width: none;
+            background: url(../images/header_bg.jpg) 50% 50% no-repeat;
+            background-size: cover;
+            &:after {
+                display: none;
+                }
+            }
+        }
+    }
