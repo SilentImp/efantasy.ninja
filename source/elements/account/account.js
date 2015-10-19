@@ -18,10 +18,13 @@
          * @description Adding events and properties
          */
         init() {
-            this.dirthday = new Pikaday({
-                field: document.querySelector('.account__input_date')
-                , format: 'YYYY-MM-DD'
-            });
+            let date = document.querySelector('.account__input_date');
+            if (date != null) {
+                this.dirthday = new Pikaday({
+                    field: document.querySelector('.account__input_date')
+                    , format: 'YYYY-MM-DD'
+                });
+            }
         }
     }
     new Account;

@@ -1,0 +1,24 @@
+section.new-games
+    .new-games__game 
+        a(href="#") 
+            img.new-games__logotype(src="images/league.png", alt="League of legends")
+    .new-games__game 
+        a(href="#") 
+            img.new-games__logotype(src="images/dota.png", alt="Dota 2")
+    .new-games__game 
+        a(href="#") 
+            img.new-games__logotype(src="images/starcraft.png", alt="StarCraft 2")
+    .new-games__game 
+        a(href="#") 
+            img.new-games__logotype(src="images/heart.png", alt="Hearth Stone")
+    .new-games__game 
+        a(href="#") 
+            img.new-games__logotype(src="images/csgo.png", alt="CS GO")
+    .new-games__game 
+        a(href="#") 
+            img.new-games__logotype(src="images/tanks.png", alt="World of tanks")
+
+form.new-games__form(action="/hint/", method="post")
+    label.new-games__label Do you want to bet on something else?
+        input.new-games__input(type="text", placeholder="Enter the game's name...", value="", required="required", name="hint")
+    button.new-games__submit(type="submit") Give a hint!

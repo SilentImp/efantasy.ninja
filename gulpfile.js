@@ -74,14 +74,14 @@ gulp.task('fonts', function () {
 gulp.task('images', function () {
   return gulp.src(dirs.source.images)
     .pipe(plumber())
-    .pipe(gulpif(/[.](svg)$/, svg2png()))
-    .pipe(gulpif(/[.](png|jpeg|jpg|svg)$/, imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        optimizationLevel: 1,
-        use: [pngquant()]
-      })
-    ))
+    // .pipe(gulpif(/[.](svg)$/, svg2png()))
+    // .pipe(gulpif(/[.](png|jpeg|jpg|svg)$/, imagemin({
+    //     progressive: true,
+    //     svgoPlugins: [{removeViewBox: false}],
+    //     optimizationLevel: 1,
+    //     use: [pngquant()]
+    //   })
+    // ))
     .pipe(gulp.dest(dirs.build.images));
 });
 

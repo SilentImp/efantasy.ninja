@@ -1,0 +1,174 @@
+@import "../../helpers/colors.css";
+
+.new-games {
+    margin: 55px auto 0;
+    max-width: 960px;
+    font-size: 0;
+    @mixin clear;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    left: 2px;
+    top: -2px;
+
+    &__label {
+        color: $text-blue;
+        font-size: 20px;
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+        }
+
+    &__input {
+        @mixin clear_input;
+        display: block;
+        width: 600px;
+        margin: 10px 0 0;
+        line-height: 46px;
+        height: 46px;
+        font-size: 40px;
+        color: $text-blue;
+        &::-webkit-input-placeholder {
+           color: color($text-blue a(20%));
+            }
+        &:-moz-placeholder {
+           color: color($text-blue a(20%));
+            }
+        &::-moz-placeholder {
+           color: color($text-blue a(20%));
+            }
+        &:-ms-input-placeholder {
+           color: color($text-blue a(20%));
+            }
+        }
+
+    &__submit {
+        @mixin clear_button;
+        display: inline-block;
+        vertical-align: bottom;
+        width: 170px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        color: $white;
+        background: $text-blue;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background .25s;
+        &:focus,
+        &:hover {
+            background: color($text-blue l(-10%));
+            }
+        &:active {
+            background: color($text-blue l(-15%));
+            }
+        }
+
+    &__form {
+        white-space: nowrap;
+        font-size: 0;
+        width: 760px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background: $cyan;
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        margin-left: -400px;
+        z-index: 10;
+        @mixin clear;
+        &:after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background: $cyan;
+            transform: rotate(315deg);
+            position: absolute;
+            left: 50%;
+            margin-left: -20px;
+            top: -15px;
+            z-index: -1;
+            }
+        }
+
+    &__logotype {
+        max-width: 75%;
+        max-height: 75%;
+        display: inline-block;
+        vertical-align: middle;
+        }
+
+    &__game {
+        height: 160px;
+        line-height: 160px;
+        width: 319px;
+        float: left;
+        width: 33.333%;
+        position: relative;
+        top: 2px;
+        left: -2px;
+        box-sizing: border-box;
+        border-left: 2px solid $dark-blue;
+        border-bottom: 2px solid $dark-blue;
+        }
+    }
+
+
+@media (max-width: 960px) {
+    html body {
+        .new-games {
+            width: auto;
+            &__label {
+                width: 100%;
+                }
+            &__submit {
+                display: block;
+                margin-top: 20px;
+                }
+            &__form {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                width: auto;
+                margin: 20px auto;
+                padding: 20px;
+            }
+            &__game {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    html body {
+        .new-games {
+            &__game {
+                width: 100%;
+                }
+            &__form{
+                white-space: normal;
+                }
+            &__input {
+                width: 100%;
+                font-size: 18px;
+                &::-webkit-input-placeholder {
+                   font-size: 18px;
+                    }
+                &:-moz-placeholder {
+                   font-size: 18px;
+                    }
+                &::-moz-placeholder {
+                   font-size: 18px;
+                    }
+                &:-ms-input-placeholder {
+                    font-size: 18px;
+                    }
+            }
+        }
+    }
+}

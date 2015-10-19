@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="246px" height="140px" viewBox="0 0 246 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="CyberBet_landing-2" sketch:type="MSArtboardGroup" transform="translate(-241.000000, -2234.000000)" fill="#61718C">
+            <g id="Shape-+-Jonnas1992-2" sketch:type="MSLayerGroup" transform="translate(241.000000, 2234.000000)">
+                <path d="M246,54.1463415 L246,0 L0,0 L0,54.1463415 C8.3601959,54.7861457 15.1213268,61.594971 14.6666667,71.2195122 C15.1213268,78.4173549 8.3601959,85.2311106 0,85.8536585 L0,140 L246,140 L246,85.8536585 C237.64715,85.2311106 230.881122,78.4173549 231.333333,71.2195122 C230.881122,61.594971 237.649599,54.7861457 246,54.1463415 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

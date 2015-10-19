@@ -1,0 +1,168 @@
+@import "../../helpers/*";
+
+.landing-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    background: $purple;
+    border-radius: 0 16px 16px 16px;
+    z-index: 101;
+    color: $white;
+    text-align: center;
+    padding: 40px 100px 0;
+    display: none;
+    a {
+        color: color($white a(50%));
+        white-space: nowrap;
+        &:hover {
+            text-decoration: none;
+            }
+        }
+    &_open {
+        display: block;
+        }
+    &__error {
+        margin: 20px auto;
+        font-size: 14px;
+        line-height: 16px;
+        }
+    &__fieldset {
+        position: relative;
+        margin: 20px 0;
+        &_valid:after,
+        &_invalid:after {
+            content: "";
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 100%;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            margin-left: 10px;
+            }
+        &_valid:after {
+            background-image: url(../images/valid.svg);
+            }
+        &_invalid:after {
+            background-image: url(../images/invalid.svg);
+            }
+        }
+    &__input {
+        @mixin clear_button;
+        width: 100%;
+        color: $white;
+        text-align: center;
+        border-bottom: 1px solid $white;
+        height: 22px;
+        line-height: 22px;
+        font-size: 18px;
+        &::-webkit-input-placeholder {
+            color: color($white a(50%));
+            }
+
+        &:-moz-placeholder {
+            color: color($white a(50%));
+            }
+
+        &::-moz-placeholder {
+            color: color($white a(50%));
+            }
+
+        &:-ms-input-placeholder {
+            color: color($white a(50%));
+            }
+        }
+    &__open-login,
+    &__open-register {
+        @mixin clear_button;
+        color: $white;
+        font-size: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+            }
+        }
+    &__submit {
+        @mixin clear_button;
+        background: $white;
+        width: 90px;
+        height: 36px;
+        font-size: 16px;
+        line-height: 36px;
+        text-align: center;
+        color: $purple;
+        margin: 0 20px 0 0;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+    &__terms {
+        font-size: 12px;
+        line-height: 14px;
+        max-width: 200px;
+        margin: 20px auto 0;
+        color: color($white a(50%));
+        }
+    &__title {
+        font-size: 22px;
+        line-height: 26px;
+        margin: 0 0 60px;
+        }
+    &__close {
+        @mixin clear_button;
+        width: 15px;
+        height: 15px;
+        background: url(../images/close_popup.svg) 50% 50% no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        }
+    &__lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: color($black a(90%));
+        z-index: 100;
+        display: none;
+        &_open {
+            display: block;
+            }
+        }
+    }
+
+@media (max-width: 600px) {
+    html body {
+        .landing-popup {
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            padding: 40px 50px 40px 20px;
+            &__open-login,
+            &__open-register {
+                font-size: 11px;
+                }
+            &__submit {
+                width: auto;
+                padding: 0 10px;
+                margin: 0 10px 0 0;
+                }
+            &__lightbox {
+                display: none;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                top: auto;
+            }
+        }
+    }
+}

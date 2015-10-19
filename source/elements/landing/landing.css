@@ -1,0 +1,443 @@
+@import "../../helpers/*";
+
+.landing {
+    color: $white;
+    position: relative;
+    overflow: hidden;
+    &__register {
+        @mixin clear_button;
+        color: $white;
+        text-align: center;
+        width: 170px;
+        height: 44px;
+        font-size: 18px;
+        line-height: 44px;
+        border-radius: 3px;
+        background: $purple;
+        vertical-align: middle;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background .25s;
+        &:focus,
+        &:hover {
+            background: color($purple l(-10%));
+            }
+        &:active {
+            background: color($purple l(-20%));
+            }
+        }
+    &__login {
+        @mixin clear_button;
+        color: $white;
+        vertical-align: middle;
+        margin: 0 0 0 20px;
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 44px;
+        height: 44px;
+        border: 2px solid color($white a(20%));
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background .25s;
+        background: color($white a(0));
+        &:focus,
+        &:hover {
+            background: color($white a(10%));
+            }
+        &:active {
+            background: color($white a(20%));
+            }
+        }
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        margin: 0 -50vw 0 0;
+        padding: 30px;
+        z-index: 5;
+        font-size: 0;
+        }
+    &__slogan {
+        width: 900px;
+        height: 100px;
+        margin: 70px auto 30px;
+        z-index: 1;
+        background: url(../images/slogan.png) 50% 0 no-repeat;
+        overflow: hidden;
+        text-indent: -9999px;
+        display: block;
+        }
+    &__logotype {
+        width: 165px;
+        height: 161px;
+        margin: 25px auto 70px;
+        background: url(../images/header_logotype.svg) 50% 50% no-repeat;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        text-indent: -9999px;
+        &-link {
+            width: 165px;
+            height: 161px;
+            display: block;
+            margin: auto;
+            }
+        }
+    &__abstract {
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px;
+        margin: -30px auto 50px;
+        max-width: 1200px;
+        color: color($white a(40%));
+        }
+    &__title {
+        text-align: center;
+        font-size: 44px;
+        line-height: 44px;
+        margin: 0 auto 50px;
+        max-width: 960px;
+        &_steps {
+            font-size: 56px;
+            line-height: 56px;
+            }
+        }
+    &__header {
+        padding: 0;
+        z-index: 4;
+        margin-bottom: -8vh;
+        position: relative;
+        .landing__abstract {
+            width: 900px;
+            margin: 0 auto;
+            color: color($white a(80%));
+            font-size: 30px;
+            line-height: 38px;
+            }
+        .landing__wrapper {
+            padding: 10px 0 80px;
+            position: static;
+            height: 695px;
+            margin-left: -1100px;
+            margin-right: -1100px;
+            border-radius: 0 0 50% 50%;
+            max-width: initial;
+            overflow: hidden;
+            position: relative;
+            @mixin clear;
+            box-shadow: 0 1px 74px 0 color($glow a(50%));
+            &:after {
+                content: "";
+                width: 120vw;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -60vw;
+                background: url("../images/header_bg.jpg") 50% 100% repeat;
+                background-size: cover;
+                z-index: -1;
+                }
+            }
+        }
+    &__twitter,
+    &__facebook {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 24px;
+        }
+    &__twitter {
+        background: url("../images/tw.svg") 50% 50% no-repeat;
+        }
+    &__facebook {
+        background: url("../images/fb.svg") 50% 50% no-repeat;
+        }
+    &__footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        border-top: 1px solid color($white a(20%));
+        line-height: 100px;
+        text-align: right;
+        color: color($white a(60%));
+        span {
+            display: inline-block;
+            font-size: 0;
+            margin: -6px 5px 0 0;
+            text-indent: -9999px;
+            overflow: hidden;
+            width: 225px;
+            height: 40px;
+            vertical-align: middle;
+
+            background: url('../images/footer_logotype.svg') 50% no-repeat;
+            }
+        }
+    &__copyright {
+        float: left;
+        }
+    &__mail {
+        display: inline-block;
+        color: color($white a(60%));
+        margin: 0 50px 0 0;
+        text-decoration: none;
+        padding: 0 0 0 30px;
+        background: url('../images/message.svg') 0 50% no-repeat;
+        }
+    &__social {
+        display: inline-block;
+        }
+    &__section {
+        padding: 80px 0;
+        @mixin clear;
+        overflow: hidden;
+        position: relative;
+        &_faq {
+            padding: 75px 0 80px;
+            .landing__title {
+                margin-bottom: 43px;
+                }
+            }
+        &_bets {
+            padding: 60px 0 67px;
+            border-bottom: 1px solid $cyan-dark;
+            background: url(../images/bg.jpg) repeat, linear-gradient(to bottom, color($white a(0%)), color($white a(1.5%))) 0 100% repeat-x;
+
+            background-size: auto auto, 100% 100%;
+
+            -webkit-background-blend-mode: overlay;
+            background-blend-mode: overlay;
+
+            .landing__abstract {
+                margin-bottom: 70px;
+                }
+            .landing__title {
+                font-size: 56px;
+                line-height: 56px;
+                }
+            }
+        &_games {
+            padding: 0;
+            z-index: 2;
+            margin-bottom: -8vh;
+            .landing__wrapper{
+                padding: 60px 0 80px;
+                padding: calc(60px + 8vh) 0 80px;
+                background: url("../images/bg.jpg") 50% 100% repeat;
+                position: relative;
+                height: 500px;
+                margin-left: -1100px;
+                margin-right: -1100px;
+                border-radius: 0 0 50% 50%;
+                max-width: initial;
+                @mixin clear;
+                }
+            }
+        &_steps {
+            padding: 0;
+            .landing__wrapper{
+                padding: 80px 0 80px;
+                padding: calc(90px + 8vh) 0 80px;
+                background: url("../images/purple.jpg") 50% 100% repeat;
+                height: 400px;
+                position: relative;
+                margin-left: -1000px;
+                margin-right: -1000px;
+                border-radius: 0 0 50% 50%;
+                max-width: initial;
+                @mixin clear;
+                }
+            }
+        }
+    &__wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+    }
+
+
+@media (max-width: 1240px) {
+    html body {
+        .landing {
+            &__footer {
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 960px) {
+    html body {
+        .landing {
+            &__title {
+                font-size: 32px;
+                line-height: 36px;
+                margin: 0 20px 36px;
+                }
+            &__slogan {
+                height: auto;
+                margin: 35px 0;
+                width: auto;
+                text-indent: 0;
+                background: none;
+                text-align: center;
+                font-size: 42px;
+                line-height: 46px;
+                font-weight: bold;
+                }
+            &__header {
+                margin: 0;
+                .landing {
+                    &__abstract {
+                        width: auto;
+                        }
+                    &__menu {
+                        position: static;
+                        top: auto;
+                        right: auto;
+                        margin: 0;
+                        padding: 0;
+                        text-align: right;
+                        }
+                    &__wrapper {
+                        margin: 0;
+                        border-radius: 0;
+                        height: auto;
+                        padding: 20px 20px 40px;
+                        background: url("../images/header_bg.jpg") 50% 50% no-repeat;
+                        background-size: cover;
+                        &:after {
+                            display: none;
+                            }
+                        }
+                    }
+                }
+            &__section {
+                &_bets {
+                    .landing {
+                        &__title {
+                            font-size: 32px;
+                            line-height: 36px;
+                            margin: 0 20px 36px;
+                            }
+                        }
+                    }
+                &_games {
+                    margin: 0;
+                    .landing {
+                        &__wrapper {
+                            margin: 0;
+                            padding: 40px 20px;
+                            border-radius: 0;
+                            height: auto;
+                            }
+                        }
+                    }
+                &_steps {
+                    .landing {
+                        &__wrapper {
+                            margin: 0;
+                            padding: 40px 20px 20px;
+                            border-radius: 0;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    html body {
+        .landing {
+            &__register {
+                width: auto;
+                padding: 0 20px;
+                }
+            &__copyright {
+                float: none;
+                }
+            &__footer {
+                text-align: left;
+                line-height: 50px;
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    html body {
+        &.popup_open {
+            .landing {
+                display: none;
+                }
+            }
+        .landing {
+            text-align: left;
+            &__copyright {
+                span {
+                    margin: auto;
+                    text-indent: 0;
+                    height: auto;
+                    width: auto;
+                    background: none;
+                    font-size: inherit;
+                    }
+                }
+            &__section {
+                padding: 40px 0;
+                &_bets {
+                    padding: 40px 0 0;
+                    .landing {
+                        &__title {
+                            margin: 0 20px;
+                            }
+                        &__abstract {
+                            margin: 10px 20px 20px;
+                            }
+                        }
+                    }
+                &_faq {
+                    padding: 40px 0 0;
+                    .landing {
+                        &__title {
+                            margin: 0 20px 20px;
+                            }
+                        }
+                    }
+                &_steps {
+                    padding: 0;
+                    .landing {
+                        &__title {
+                            margin: 0;
+                            }
+                        }
+                    }
+                &_games {
+                    padding: 0;
+                    .landing {
+                        &__title {
+                            margin: 0;
+                            }
+                        }
+                    }
+                }
+            &__abstract {
+                font-size: 24px;
+                line-height: 32px;
+                }
+            &__slogan,
+            &__abstract,
+            &__title {
+                text-align: left;
+            }
+        }
+    }
+}

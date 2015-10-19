@@ -1,0 +1,66 @@
+@import "../../helpers/*";
+
+.bets {
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 33px 0 0 30px;
+    white-space: nowrap;
+
+    float: left;
+    left: 100%;
+    margin-left: -50%;
+
+    transform: translateX(-50%);
+
+    &__column {
+        display: inline-block;
+        position: relative;
+        width: 276px;
+        &:nth-child(2n) {
+            top: -33px;
+            }
+        }
+    &__bet {
+        vertical-align: top;
+        display: block;
+        width: 186px;
+        height: 120px;
+        background: url(../images/panel.svg) 0 0 no-repeat;
+        overflow: hidden;
+        line-height: 120px;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 30px 30px 0;
+        padding: 10px 30px;
+
+        &_complete {
+            background-image: url(../images/panel-complete.svg);
+            padding-top: 45px;
+            line-height: 91px;
+            height: 91px;
+            }
+
+        &_priority {
+            &_low {
+                opacity: .3;
+                }
+            &_normal {
+                opacity: .5;
+                }
+            &_middle {
+                opacity: .7;
+                }
+            &_hight {
+                opacity: 1;
+                }
+            }
+        }
+    &__message {
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 24px;
+        white-space: normal;
+        }
+    }

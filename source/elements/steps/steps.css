@@ -1,0 +1,165 @@
+@import "../../helpers/*";
+
+.steps {
+    max-width: 1200px;
+    text-align: center;
+    counter-reset: steps;
+    margin: 70px auto 0;
+    &__step {
+        vertical-align: top;
+        display: inline-block;
+        width: 300px;
+        margin: 0 51px;
+        font-size: 26px;
+        line-height: 32px;
+        position: relative;
+        &:first-child {
+            margin-left: 0;
+            }
+        &:last-child {
+            margin-right: 0;
+            }
+        &:after {
+            content: "";
+            height: 3px;
+            width: 280px;
+            position: absolute;
+            top: 62px;
+            left: 50%;
+            margin-left: 66px;
+            background: linear-gradient(to right, $white, $white 60%, transparent 60%, transparent) 0 0 repeat-x;
+            background-size: 20px 100%;
+            }
+        &:last-child:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -4px;
+            left: 4px;
+            right: 0;
+            width: 122px;
+            height: 124px;
+            background: url('../images/ninja.svg') 50% 0 no-repeat;
+            margin: auto;
+            z-index: 1;
+            }
+        &:nth-child(1):before {
+            background: $white url('../images/1.svg') 50% 50% no-repeat;
+            font-size: 0;
+            text-indent: -9999px;
+            }
+        &:nth-child(2):before {
+            background: $white url('../images/2.svg') 50% 50% no-repeat;
+            font-size: 0;
+            text-indent: -9999px;
+            }
+        &:nth-child(3):before {
+            background: $white url('../images/3.svg') 50% 50% no-repeat;
+            font-size: 0;
+            text-indent: -9999px;
+            }
+        &:before {
+            counter-increment: steps;
+            content: counter(steps);
+            width: 85px;
+            height: 85px;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 85px;
+            margin: 18px auto 28px;
+            border-radius: 100%;
+            text-align: center;
+            color: $purple;
+            background: $white;
+            display: block;
+            z-index: 2;
+            overflow: hidden;
+            }
+        }
+    }
+
+@media (max-width: 1200px) and (min-width: 961px) {
+    html body {
+        .steps {
+            &__step {
+                margin: 0 11px;
+                &:after {
+                    width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+
+@media (max-width: 960px) and (min-width: 601px) {
+    html body {
+        .landing__title_steps {
+            font-size: 32px;
+            line-height: 36px;
+            margin: 0 auto 36px;
+            }
+        .steps {
+            margin: 36px auto;
+            &__step {
+                margin: 0 11px;
+                font-size: 14px;
+                line-height: 16px;
+                width: 150px;
+                &:before {
+                    width: 40px;
+                    height: 40px;
+                    }
+                &:nth-child(1):before,
+                &:nth-child(2):before,
+                &:nth-child(3):before {
+                    font-size: 18px;
+                    line-height: 40px;
+                    text-indent: 0;
+                    background: $white;
+                    }
+                &:after {
+                    height: 1px;
+                    top: 38px;
+                    width: 130px;
+                    margin-left: 26px;
+                    background: linear-gradient(to right, $white, $white 60%, transparent 60%, transparent) 0 0 repeat-x;
+                    background-size: 10px 100%;
+                    }
+                &:last-child:after {
+                    width: 60px;
+                    height: 60px;
+                    background-size: contain;
+                    top: 6px;
+                    left: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+@media (max-width: 600px) {
+    html body {
+        .steps {
+            list-style: decimal;
+            margin: 40px 0;
+            &__step {
+                display: list-item;
+                padding: 0;
+                margin: 0 0 10px 40px;
+                text-align: left;
+                width: auto;
+                font-size: 24px;
+                line-height: 32px;
+                &:first-child {
+                    margin: 0 0 10px 40px;
+                    }
+                &:last-child:after,
+                &:after,
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

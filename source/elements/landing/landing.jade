@@ -1,0 +1,43 @@
+main.landing
+    header.landing__header
+        .landing__wrapper
+
+            menu.landing__menu
+                button.landing__register(type="button") Sign up
+                button.landing__login(type="button") Log in
+
+            a.landing__logotype-link(href="/")
+                h1.landing__logotype Cyberbet ninja
+
+            h2.landing__slogan Victory. Just another skill of a ninja
+            p.landing__abstract It's the exact place where you can become a real cyber-ninja and get some extra money betting on your favourite games
+
+    section.landing__section.landing__section_games
+        .landing__wrapper
+            h2.landing__title Most powerful ninja teams are waiting for you to join them in a fight for
+            include ../new-games/new-games.jade
+
+    section.landing__section.landing__section_steps
+        .landing__wrapper
+            h2.landing__title.landing__title_steps 3 simple ninja-moves
+            include ../steps/steps.jade
+
+    section.landing__section.landing__section_bets
+        h2.landing__title Even a loss could be the victory
+        p.landing__abstract Cyber-ninjas choose their own conditions for the victory
+        include ../bets/bets.jade
+
+    section.landing__section.landing__section_faq
+        .landing__wrapper
+            h2.landing__title Have a question?
+            include ../questions/questions.jade
+
+    footer.landing__footer
+        p.landing__copyright
+            span Cyberbet ninja  
+            |  © 2014
+        a.landing__mail(href="#") Get in touch
+        nav.landing__social
+            h2.landing__social Help us get famous
+            a.landing__facebook(href="#")
+            a.landing__twitter(href="#")

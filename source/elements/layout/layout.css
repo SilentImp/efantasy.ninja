@@ -9,6 +9,10 @@ html{
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
         box-shadow: inset 240px 0 0 0 $black-light;
+        &.landing-bg {
+            box-shadow: none;
+            background: $blue url('../images/bg.jpg') repeat;
+            }
         .page {
             position: relative;
             @mixin clear;

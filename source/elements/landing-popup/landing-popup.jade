@@ -1,0 +1,50 @@
+form.landing-popup.landing-popup_login(action="/login", method="post")
+
+    button.landing-popup__close(type="button")
+
+    h2.landing-popup__title Sign In
+
+    fieldset.landing-popup__fieldset.landing-popup__fieldset_valid
+        input.landing-popup__input(type="text", placeholder="Email or Username", required="required", value="")
+
+    fieldset.landing-popup__fieldset.landing-popup__fieldset_invalid
+        input.landing-popup__input(type="password", placeholder="Password", required="required", value="")
+
+    p.landing-popup__error I’m an error.
+
+    menu.landing-popup__menu
+        button.landing-popup__submit(type="submit") Sign in
+        button.landing-popup__open-register(type="button") Don’t have an acount? Signup!
+
+    p.landing-popup__terms Signing up, you are agree to our 
+        a(href="#") Terms of Service
+        |  and  
+        a(href="#") Privacy Policy
+
+form.landing-popup.landing-popup_register(action="/register", method="post")
+
+    button.landing-popup__close(type="button")
+
+    h2.landing-popup__title Register an account
+
+    fieldset.landing-popup__fieldset
+        input.landing-popup__input(type="email", placeholder="Email", required="required", value="")
+
+    fieldset.landing-popup__fieldset.landing-popup__fieldset_valid
+        input.landing-popup__input(type="text", placeholder="Username", required="required", value="")
+
+    fieldset.landing-popup__fieldset.landing-popup__fieldset_invalid
+        input.landing-popup__input(type="password", placeholder="Password", required="required", value="")
+
+    p.landing-popup__error I’m an error.
+
+    menu.landing-popup__menu
+        button.landing-popup__submit(type="submit") Sign up
+        button.landing-popup__open-login(type="button") Already have an acount?
+
+    p.landing-popup__terms Signing up, you are agree to our 
+        a(href="#") Terms of Service
+        |  and  
+        a(href="#") Privacy Policy
+
+.landing-popup__lightbox
