@@ -13,7 +13,7 @@
       <header class="landing__header">
         <div class="landing__wrapper">
           <menu class="landing__menu">
-            <button type="button" class="landing__signup">Sign up</button>
+            <button type="button" class="landing__register">Sign up</button>
             <button type="button" class="landing__login">Log in</button>
           </menu><a href="/" class="landing__logotype-link">
             <h1 class="landing__logotype">Cyberbet ninja</h1></a>
@@ -21,7 +21,7 @@
           <p class="landing__abstract">It's the exact place where you can become a real cyber-ninja and get some extra money betting on your favourite games</p>
         </div>
       </header>
-      <section class="landing__section landing__section_premarked">
+      <section class="landing__section landing__section_games">
         <div class="landing__wrapper">
           <h2 class="landing__title">Most powerful ninja teams are waiting for you to join them in a fight for</h2>
           <section class="new-games">
@@ -40,7 +40,7 @@
           </form>
         </div>
       </section>
-      <section class="landing__section landing__section_marked">
+      <section class="landing__section landing__section_steps">
         <div class="landing__wrapper">
           <h2 class="landing__title landing__title_steps">3 simple ninja-moves</h2>
           <ol class="steps">
@@ -124,12 +124,49 @@
         </div>
       </section>
       <footer class="landing__footer">
-        <p class="landing__copyright"><span>Cyberbet ninja</span> © 2014</p><a href="#" class="landing__mail">Get in touch</a>
+        <p class="landing__copyright"><span>Cyberbet ninja  </span> © 2014</p><a href="#" class="landing__mail">Get in touch</a>
         <nav class="landing__social">
           <h2 class="landing__social">Help us get famous</h2><a href="#" class="landing__facebook"></a><a href="#" class="landing__twitter"></a>
         </nav>
       </footer>
     </main>
+    <form action="/login" method="post" class="landing-popup landing-popup_login">
+      <button type="button" class="landing-popup__close"></button>
+      <h2 class="landing-popup__title">Sign In</h2>
+      <fieldset class="landing-popup__fieldset landing-popup__fieldset_valid">
+        <input type="text" placeholder="Email or Username" required="required" value="" class="landing-popup__input"/>
+      </fieldset>
+      <fieldset class="landing-popup__fieldset landing-popup__fieldset_invalid">
+        <input type="password" placeholder="Password" required="required" value="" class="landing-popup__input"/>
+      </fieldset>
+      <p class="landing-popup__error">I’m an error.</p>
+      <menu class="landing-popup__menu">
+        <button type="submit" class="landing-popup__submit">Sign in</button>
+        <button type="button" class="landing-popup__open-register">Don’t have an acount? Signup!</button>
+      </menu>
+      <p class="landing-popup__terms">Signing up, you are agree to our <a href="#">Terms of Service</a> and  <a href="#">Privacy Policy</a></p>
+    </form>
+    <form action="/register" method="post" class="landing-popup landing-popup_register">
+      <button type="button" class="landing-popup__close"></button>
+      <h2 class="landing-popup__title">Register an account</h2>
+      <fieldset class="landing-popup__fieldset">
+        <input type="email" placeholder="Email" required="required" value="" class="landing-popup__input"/>
+      </fieldset>
+      <fieldset class="landing-popup__fieldset landing-popup__fieldset_valid">
+        <input type="text" placeholder="Username" required="required" value="" class="landing-popup__input"/>
+      </fieldset>
+      <fieldset class="landing-popup__fieldset landing-popup__fieldset_invalid">
+        <input type="password" placeholder="Password" required="required" value="" class="landing-popup__input"/>
+      </fieldset>
+      <p class="landing-popup__error">I’m an error.</p>
+      <menu class="landing-popup__menu">
+        <button type="submit" class="landing-popup__submit">Sign up</button>
+        <button type="button" class="landing-popup__open-login">Already have an acount?</button>
+      </menu>
+      <p class="landing-popup__terms">Signing up, you are agree to our <a href="#">Terms of Service</a> and  <a href="#">Privacy Policy</a></p>
+    </form>
+    <div class="landing-popup__lightbox"></div>
+    <script src="js/velocity/velocity.js"></script>
     <script src="js/scripts.js" async="async" defer="defer"></script>
   </body>
 </html>
