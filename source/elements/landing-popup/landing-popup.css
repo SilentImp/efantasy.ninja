@@ -143,6 +143,9 @@
 @media (max-width: 600px) {
     html body {
         .landing-popup {
+            position: relative;
+            min-height: 100vh;
+            box-sizing: border-box;
             width: auto;
             height: auto;
             border-radius: 0;

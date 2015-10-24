@@ -1,5 +1,16 @@
 @import "../../helpers/*";
 
+.movie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s;
+    }
+
 .landing {
     color: $white;
     position: relative;
@@ -107,14 +118,22 @@
         z-index: 4;
         margin-bottom: -8vh;
         position: relative;
+        .landing__slogan {
+            z-index: 2;
+            position: relative;
+            }
         .landing__abstract {
             width: 900px;
             margin: 0 auto;
             color: color($white a(80%));
             font-size: 30px;
             line-height: 38px;
+
+            z-index: 2;
+            position: relative;
             }
         .landing__wrapper {
+            transform: translateZ(0);
             padding: 10px 0 80px;
             position: static;
             height: 695px;
@@ -148,6 +167,8 @@
         display: inline-block;
         vertical-align: middle;
         margin: 0 0 0 24px;
+        z-index: 2;
+        position: relative;
         }
     &__twitter {
         background: url("../images/tw.svg") 50% 50% no-repeat;
@@ -161,6 +182,8 @@
         border-top: 1px solid color($white a(20%));
         line-height: 100px;
         text-align: right;
+        z-index: 2;
+        position: relative;
         color: color($white a(60%));
         span {
             display: inline-block;
@@ -294,12 +317,12 @@
                         width: auto;
                         }
                     &__menu {
-                        position: static;
+                        position: relative;
                         top: auto;
                         right: auto;
                         margin: 0;
                         padding: 0;
-                        text-align: right;
+                        text-align: center;
                         }
                     &__wrapper {
                         margin: 0;
